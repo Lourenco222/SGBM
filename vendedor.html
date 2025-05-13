@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Vendedor - Gestão de Bancas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Barra de Navegação -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Painel do Vendedor</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="perfil_vendedor.html">Perfil</a></li>
+          <li class="nav-item"><a class="nav-link" href="produtos_vendedor.html">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="pedidos_vendedor.html">Pedidos</a></li>
+          <li class="nav-item"><a class="nav-link" href="logout.html">Sair</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Resumo da Banca -->
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card text-white bg-success mb-3">
+          <div class="card-header">Vendas Hoje</div>
+          <div class="card-body">
+            <h5 class="card-title">R$ 350,00</h5>
+            <p class="card-text">Total de vendas realizadas hoje.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card text-white bg-info mb-3">
+          <div class="card-header">Produtos Disponíveis</div>
+          <div class="card-body">
+            <h5 class="card-title">45 produtos</h5>
+            <p class="card-text">Quantidade de produtos atualmente em estoque.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card text-white bg-warning mb-3">
+          <div class="card-header">Pedidos Pendentes</div>
+          <div class="card-body">
+            <h5 class="card-title">3 Pedidos</h5>
+            <p class="card-text">Pedidos que ainda precisam ser processados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabela de Produtos -->
+  <div class="container">
+    <h3 class="mb-4">Produtos Cadastrados</h3>
+    <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#modalAdicionar">Adicionar Produto</button>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Preço</th>
+          <th scope="col">Estoque</th>
+          <th scope="col">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Bananas</td>
+          <td>R$ 5,00</td>
+          <td>20</td>
+          <td>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEditar">Editar</button>
+            <button class="btn btn-danger btn-sm">Deletar</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Maçãs</td>
+          <td>R$ 6,00</td>
+          <td>15</td>
+          <td>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEditar">Editar</button>
+            <button class="btn btn-danger btn-sm">Deletar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal Adicionar Produto -->
+  <div class="modal fade" id="modalAdicionar" tabindex="-1" aria-labelledby="modalAdicionarLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalAdicionarLabel">Adicionar Produto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="nomeProduto" class="form-label">Nome do Produto</label>
+              <input type="text" class="form-control" id="nomeProduto" placeholder="Nome do produto">
+            </div>
+            <div class="mb-3">
+              <label for="precoProduto" class="form-label">Preço</label>
+              <input type="number" class="form-control" id="precoProduto" placeholder="Preço do produto">
+            </div>
+            <div class="mb-3">
+              <label for="estoqueProduto" class="form-label">Estoque</label>
+              <input type="number" class="form-control" id="estoqueProduto" placeholder="Quantidade em estoque">
+            </div>
+            <button type="submit" class="btn btn-primary">Adicionar Produto</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Editar Produto -->
+  <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalEditarLabel">Editar Produto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="nomeProdutoEditar" class="form-label">Nome do Produto</label>
+              <input type="text" class="form-control" id="nomeProdutoEditar" value="Bananas">
+            </div>
+            <div class="mb-3">
+              <label for="precoProdutoEditar" class="form-label">Preço</label>
+              <input type="number" class="form-control" id="precoProdutoEditar" value="5,00">
+            </div>
+            <div class="mb-3">
+              <label for="estoqueProdutoEditar" class="form-label">Estoque</label>
+              <input type="number" class="form-control" id="estoqueProdutoEditar" value="20">
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white text-center py-3 mt-auto">
+    © 2025 Sistema de Gestão de Bancas - Todos os direitos reservados.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

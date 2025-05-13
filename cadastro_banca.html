@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro de Banca</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <h2 class="text-center mb-4">Cadastro de Banca</h2>
+    <div class="card shadow p-4 mx-auto" style="max-width: 600px;">
+
+      <form>
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome da Banca</label>
+          <input type="text" class="form-control" id="nome" placeholder="Ex: Banca do Zé">
+        </div>
+
+        <div class="mb-3">
+          <label for="tipo" class="form-label">Tipo de Produto</label>
+          <select id="tipo" class="form-select">
+            <option selected disabled>Escolha uma opção</option>
+            <option>Frutas</option>
+            <option>Legumes</option>
+            <option>Peixe</option>
+            <option>Roupa</option>
+            <option>Outro</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="localizacao" class="form-label">Localização no Mercado</label>
+          <input type="text" class="form-control" id="localizacao" placeholder="Ex: Corredor A, perto da entrada">
+        </div>
+
+        <div class="mb-3">
+          <label for="numero" class="form-label">Número da Banca</label>
+          <input type="number" class="form-control" id="numero" placeholder="Ex: 12">
+        </div>
+
+        <div class="mb-3">
+          <label for="foto" class="form-label">Foto da Banca (opcional)</label>
+          <input type="file" class="form-control" id="foto">
+        </div>
+
+        <div class="mb-3">
+          <label for="descricao" class="form-label">Descrição</label>
+          <textarea class="form-control" id="descricao" rows="3" placeholder="Fale um pouco sobre sua banca..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">Cadastrar Banca</button>
+      </form>
+
+    </div>
+  </div>
+
+</body>
+</html>

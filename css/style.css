@@ -1,0 +1,62 @@
+/* Banner */
+.banner {
+    background: url("../img/Imagem1.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Sobreposição mais escura */
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .overlay h1, .overlay p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  footer .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  footer .row {
+    align-items: center;
+  }
+  
+  footer .col-md-6 {
+    margin-bottom: 10px;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: #ffd700; /* Cor de hover mais atrativa */
+  }
+  
+  /* Garantir que o rodapé fique no final da página */
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex-grow: 1;
+  }
+  
