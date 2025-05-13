@@ -50,9 +50,9 @@
         </div>
 
         <!-- Produto Vendido (Apenas para Vendedores) -->
-        <div class="mb-3" id="produto_vendido" style="display: none;">
-          <label for="produto" class="form-label">Produto vendido</label>
-          <input type="text" class="form-control" id="produto" placeholder="Ex: Frutas, Verduras, Artesanato...">
+        <div class="mb-3" id="Nome_Banca" style="display: none;">
+          <label for="produto" class="form-label">Nome da Banca</label>
+          <input type="text" class="form-control" id="NomeBanca" >
         </div>
 
         <!-- Telefone -->
@@ -87,7 +87,7 @@
     // Exibir o campo de "Produto vendido" apenas para Vendedores
     document.getElementById('tipo_usuario').addEventListener('change', function () {
       const tipoUsuario = this.value;
-      const produtoVendido = document.getElementById('produto_vendido');
+      const produtoVendido = document.getElementById('Nome_Banca');
       
       if (tipoUsuario === 'vendedor') {
         produtoVendido.style.display = 'block'; // Exibe o campo para vendedor
