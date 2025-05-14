@@ -59,4 +59,19 @@
   main {
     flex-grow: 1;
   }
-  
+  .banner1 {
+  background-image: url('../img/Imagem1.jpg'); /* ou qualquer imagem de fundo desejada */
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  position: relative;
+}
+
+.banner .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
