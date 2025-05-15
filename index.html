@@ -7,6 +7,37 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+.carousel-item img {
+  height: 550px;
+  object-fit: cover;
+}
+
+.carousel-caption h5 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+}
+
+/* Novo estilo para o título fixo */
+.carousel-title {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999; /* Muito acima do carrossel */
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 30px;
+  border-radius: 8px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+</style>
+
 </head>
 <body class="d-flex flex-column min-vh-100">
 
@@ -16,25 +47,73 @@
       <a class="navbar-brand" href="#">Mercado Municipal</a>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
+                 <a class="nav-link active" href="index.html">Home</a>
+          <li class="nav-item"><a class="nav-link " href="lista_bancas.html">Mercado</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contacto.html">Contactos</a></li>
+                 
           <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
           <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
-            <li class="nav-item"><a class="nav-link" href="Contacto.html">Contactos</a></li>
+       
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Banner -->
-  <header class="banner">
-    <div class="overlay d-flex align-items-center justify-content-center text-center text-white">
-      <div>
-        <h1 class="display-4">Sistema de Gestão de Bancas</h1>
-        <p class="lead">Organize, controle e facilite a gestão das bancas do seu mercado.</p>
-        <a href="login.html" class="btn btn-primary me-2">Entrar</a>
-        <a href="cadastro.html" class="btn btn-outline-light">Cadastrar</a>
+<!-- SlideShow com Título fixo -->
+<div class="position-relative text-center text-white mb-5" style="height: 550px;">
+  <!-- Título fixo com nova classe -->
+  <h1 class="carousel-title">Sistema de Gestão de Bancas</h1>
+
+  <!-- Slideshow -->
+  <div id="bancaCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+    <div class="carousel-inner h-100">
+      <div class="carousel-item active h-100">
+        <img src="img/Imagem1.jpg" class="d-block w-100 h-100" alt="Banca do Zé">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+          <h5>Banca do Zé</h5>
+          <p>Frutas frescas e de qualidade. Venha conferir!</p>
+            <a href="banca.html" class="btn btn-success btn-lg px-4 rounded-pill shadow">
+              Visitar Banca
+              <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+        </div>
       </div>
+      <div class="carousel-item h-100">
+        <img src="img/imagem2 (1).jpg" class="d-block w-100 h-100" alt="Banca do João">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+          <h5>Banca do João</h5>
+          <p>Legumes fresquinhos direto da horta para você.</p>
+            <a href="banca.html" class="btn btn-success btn-lg px-4 rounded-pill shadow">
+              Visitar Banca
+              <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+       </div>
+      </div>
+     <div class="carousel-item h-100">
+  <img src="img/imagem2 (2).jpg" class="d-block w-100 h-100 object-fit-cover" alt="Banca da Maria">
+  <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-4">
+    <h5 class="display-6 fw-bold text-white mb-2">Banca da Maria</h5>
+    <p class="text-light mb-4">Peixes frescos e frutos do mar. A melhor qualidade diretamente do litoral.</p>
+  <a href="banca.html" class="btn btn-success btn-lg px-4 rounded-pill shadow">
+  Visitar Banca
+  <i class="bi bi-arrow-right ms-2"></i>
+</a>
+
+  </div>
+</div>
     </div>
-  </header>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#bancaCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bancaCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próxima</span>
+    </button>
+  </div>
+</div>
 
   <!-- Conteúdo principal -->
   <main class="flex-grow-1">
